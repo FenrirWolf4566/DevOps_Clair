@@ -40,22 +40,5 @@ services:
     volumes:
       - ./nginx.conf:/etc/nginx/conf.d/default.conf
 
-  rabbitmq:
-    image: rabbitmq:3-management
-    container_name: 'rabbitmq'
-    restart: always
-    environment:
-      - "RABBITMQ_DEFAULT_PASS=password"
-      - "RABBITMQ_DEFAULT_USER=username"
-    ports:
-      - 15672:15672
-      - 5672:5672
-  
-  smtp:
-    image: maildev/maildev
-    ports:  
-      - "1080:1080"
-      - "1025:1025"
-
 volumes:
   db:
