@@ -2,3 +2,4 @@
 /front/node_modules/
 /old/app/dist/
 /old/app/node_modules/
+.env
